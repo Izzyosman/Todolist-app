@@ -67,3 +67,39 @@ function updateLS() {
 
     localStorage.setItem("todos", JSON.stringify(todos));
 }
+
+// New API POST request
+const newTask = {
+    // Your task properties like 'title', 'completed', etc.
+  };
+  
+  fetch('http://localhost:3001/api/tasks', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newTask)
+  })
+    .then(response => response.json())
+    .then(savedTask => {
+      // Handle the response if needed
+    })
+    .catch(error => {
+      // Handle errors
+    });
+
+    // New API DELETE request
+fetch(`http://localhost:3001/api/tasks/${task.id}`, {
+  method: 'DELETE'
+})
+  .then(response => {
+    if (response.status === 204) {
+      // Task removed successfully
+      // Update your UI as needed
+    } else {
+      // Handle other response statuses
+    }
+  })
+  .catch(error => {
+    // Handle errors
+  });
