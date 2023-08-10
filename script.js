@@ -103,3 +103,36 @@ fetch(`http://localhost:3001/api/tasks/${task.id}`, {
   .catch(error => {
     // Handle errors
   });
+
+  // Filter options
+const filterAllButton = document.getElementById('all');
+const filterCompletedButton = document.getElementById('completed');
+
+// Display tasks based on selected filter
+filterAllButton.addEventListener('click', () => {
+  displayTasks(tasks);
+});
+
+filterCompletedButton.addEventListener('click', () => {
+  const completedTasks = tasks.filter(task => task.completed);
+  displayTasks(completedTasks);
+});
+
+function displayTasks(taskList) {
+    // Clear existing tasks
+    taskListContainer.innerHTML = '';
+  
+    // Loop through tasks and display them
+    taskList.forEach((task) => {
+      const taskItem = document.createElement('li');
+      taskItem.textContent = task.title;
+  
+      if (task.completed) {
+        taskItem.classList.add('completed');
+      }
+  
+      taskListContainer.appendChild(taskItem);
+    });
+  }
+
+  

@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #444;
+    background-color: rgb(229, 191, 208);
+    color: black;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    color: rgb(179, 131, 226);
+    color: rgb(100, 18, 182);
     font-size: 10rem;
     text-align: center;
     opacity: 0.4;
@@ -38,30 +38,30 @@ form {
 }
 
 .input::placeholder {
-    color: #d5d5d5;
+    color: #e199b7;
 }
 
 .todos {
-    background-color: #fff;
+    background-color: pink;
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
 
 .todos li {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e199b7;
     cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem 2rem;
 }
 
 .todos li.completed {
-    color: #b6b6b6;
+    color: black;
     text-decoration: line-through;
 }
 
 small {
-    color: #b5b5b5;
+    color: black;
     margin-top: 3rem;
     text-align: center;
 }
