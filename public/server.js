@@ -32,6 +32,4 @@ app.delete('/api/tasks/:id', (req, res) => {
   res.sendStatus(204);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(4444,() => console.log(`server is listening on 4444`)); 
